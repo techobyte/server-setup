@@ -1,0 +1,54 @@
+# JAVA Stack on CentOS
+```sh
+$  wget http://download.oracle.com/otn-pub/java/jdk/7u79-b15/jdk-7u79-linux-x64.rpm?AuthParam=1437243125_07c1ad264df66e4c8b11d6698cc64f0d
+$  ll
+$  mv jdk-7u79-linux-x64.rpm\?AuthParam\=1437243125_07c1ad264df66e4c8b11d6698cc64f0d jdk-7u79-linux-x64.rpm
+$  rpm -Uvh jdk-7u79-linux-x64.rpm
+$  java -v
+$  java -version
+$  javac -version
+$  yum list | mvn
+$  yum list | maven
+$  yum list | grep maven
+$  yum list | grep mvn
+$  yum instal maven
+$  yum install maven
+$  wget http://www.interior-dsgn.com/apache/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz
+$  tar -xzf apache-maven-3.3.3-bin.tar.gz
+$  ll
+$  ll /usr/
+$  ll /usr/local
+$  mv apache-maven-3.3.3 /usr/maven
+$  ll /usr
+$  ll /usr/maven
+$  ln -s /usr/maven/bin/mvn /usr/bin/mvn
+$  nano /etc/profile.d/maven.sh
+$  chmod +x /etc/profile.d/maven.sh
+$  source /etc/profile.d/maven.sh
+$  mvn -version
+$  yum install git
+$  git -v
+$  git --version
+$  wget http://mirror.olnevhost.net/pub/apache/tomcat/tomcat-7/v7.0.63/bin/apache-tomcat-7.0.63.tar.gz
+$  tar -xzf apache-tomcat-7.0.63.tar.gz
+$  ll
+$  mv apache-tomcat-7.0.63 /usr/local/tomcat7
+$  nano /etc/profile.d/tomcat.sh
+$  chmod +x /etc/profile.d/tomcat.sh
+$  source /etc/profile.d/tomcat.sh
+$  chmod +x $CATALINA_HOME/bin/startup.sh
+$  chmod +x $CATALINA_HOME/bin/shutdown.sh
+$  chmod +x $CATALINA_HOME/bin/catalina.sh
+$  cd $CATALINA_HOME/bin
+$  ./startup.sh
+$  ./shutdown.sh
+$  nano /etc/profile.d/jdk.sh
+$  mvn -version
+$  nano /etc/profile.d/jdk.sh
+$  nano /etc/init.d/tomcat
+$  echo $JAVA_HOME
+$  chmod a+x /etc/init.d/tomcat
+$  chkconfig --add tomcat
+$  service tomcat start
+$  chkconfig tomcat on
+```
