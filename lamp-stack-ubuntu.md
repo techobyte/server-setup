@@ -1,18 +1,27 @@
 ```sh
 $ apt-get update
-$ apt-get install apache2 apache2-utils
-$ apt-get install php5 libapache2-mod-php5 php-pear php5-mcrypt
 
+# Installing  Apache...
+$ apt-get install apache2 apache2-utils
+
+# Installing PHP5
+$ apt-get install php5 libapache2-mod-php5
+
+# Installing PHP5 modules
+$ apt-cache search php5-
+$ apt-get install php5-common php-pear php5-mcrypt php5-curl php5-gd
+
+# Enable PHP index file for apache
 $ nano /etc/apache2/mods-enabled/dir.conf
 <IfModule mod_dir.c>
     DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 </IfModule>
 
-$ service apache2 restart
-$ apt-cache search php5-
-$ apt-get install php5-common php5-curl php5-gd
 $ echo "<?php phpinfo(); ?>" > /var/www/html/info.php
 
+$ service apache2 restart
+
+# Installing MySQL server and Installing PHP5-MySQL module
 $ apt-get install mysql-server libapache2-mod-auth-mysql php5-mysql
 $ mysql_install_db
 $ mysql_secure_installation
