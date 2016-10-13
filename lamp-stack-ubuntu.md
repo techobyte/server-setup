@@ -1,4 +1,17 @@
 ```sh
+#!/bin/bash
+apt-get update -y
+apt-get install -y apache2 apache2-utils
+a2enmod rewrite
+apt-get install php5 libapache2-mod-php5
+apt-get install php5-mcrypt php5-gd php5-common
+apt-get install -y php5-mysql php5-curl php5-gd php5-intl php-pear php5-imagick php5-imap php5-mcrypt php5-memcache
+apt-get install -y php5-ming php5-ps php5-pspell php5-recode php5-snmp php5-sqlite php5-tidy php5-xmlrpc php5-xsl
+
+echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+```
+
+```sh
 $ apt-get update
 
 # Installing  Apache...
